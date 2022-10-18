@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <script>
+      function sum (arr, tar){
+        let obj = {};
+        for(let i=0; i<arr.length; i++){
+          let item = arr[i];
+          if(obj[item] === undefined){
+            let x = tar - item;
+            obj[x] = i;
+          }
+          else{
+            return [obj[item], i];
+          }
+        }
+        return null;
+
+      }
+       console.log(sum([2,11,7,15], 9))
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
